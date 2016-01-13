@@ -9,7 +9,7 @@
           %li= msg
 
   .form-group
-    = f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'
+    = f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'form-control'
     = f.hidden_field :picture_cache
 
   .form-group

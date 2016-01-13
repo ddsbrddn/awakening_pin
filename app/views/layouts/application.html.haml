@@ -14,13 +14,13 @@
         %ul.nav.navbar-nav.navbar-right
           %li= link_to "New Pin", new_pin_path
           %li= link_to "Account", edit_user_registration_path
-          %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+          %li= link_to "Log Out", destroy_user_session_path, method: :delete
       - else
         %ul.nav.navbar-nav.navbar-right
           %li= link_to "Sign Up", new_user_registration_path
-          %li= link_to "Sign In", new_user_session_path
+          %li= link_to "Log In", new_user_session_path
 
-  .container      
+  .container
     - flash.each do |name, msg|
       = content_tag :div, msg, class: "alert alert-info"
 
