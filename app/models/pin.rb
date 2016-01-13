@@ -1,6 +1,8 @@
 class Pin < ActiveRecord::Base
   belongs_to :user
   mount_uploader :picture, PictureUploader
+  validates :picture, presence: true
+  validates :title, presence: true
   validate :picture_size
 
   private
